@@ -1,0 +1,9 @@
+*.zip
+messages/
+facebook-jaydeng01/
+group_chat.json
+secrets.txt
+.DS_Store
+.vscode/
+__pycache__/
+env/
