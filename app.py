@@ -2,17 +2,18 @@
 import random
 from flask import Flask, request
 from pymessenger.bot import Bot
+import os
 
 app = Flask(__name__)
 
+# def getTokens():
+#     with open("secrets.txt") as files:
+#         return files.readlines()
 
-def getTokens():
-    with open("secrets.txt") as files:
-        return files.readlines()
-
-
-ACCESS_TOKEN = getTokens()[0]
-VERIFY_TOKEN = getTokens()[1]
+# ACCESS_TOKEN = getTokens()[0]
+# VERIFY_TOKEN = getTokens()[1]
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 bot = Bot(ACCESS_TOKEN)
 
 
