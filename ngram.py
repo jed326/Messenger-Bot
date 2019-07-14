@@ -1,5 +1,6 @@
-import re, string, random, time, math
-from collections import Counter, deque
+import re, string, random, math
+import pickle
+from collections import deque
 
 
 def tokenize(text):
@@ -49,7 +50,7 @@ class NgramModel(object):
             elif self._order > 1:
                 context_deque.popleft()
                 context_deque.append(word)
-        return " ".join(sentence)
+        return " ".join(sentence).replace(" <END>", "")
 
     def perplexity(self, sentence):
         tokens = tokenize(sentence)
