@@ -6,7 +6,7 @@ import os
 import pickle
 import ngram
 
-with open('Model/JayDeng.pkl') as file:
+with open('Model/JayDeng.pkl', 'rb') as file:
     model = pickle.load(file)
 app = Flask(__name__)
 
