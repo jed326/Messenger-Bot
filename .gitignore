@@ -7,3 +7,6 @@ secrets.txt
 .vscode/
 __pycache__/
 env/
+*.pdf
+*.pyc
+Input/
